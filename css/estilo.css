@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+:root {
+    --cor01:#F2F2F2;
+    --cor02:#A6A6A6;
+    --cor03:#737373;
+    --cor04:#404040;
+    --cor05:#262626;
+}
+
+body {
+    background-color: var(--cor03);
+}
+
+img {
+    height: 200px;
+}
+
+header {
+    background-color: black;
+}
+
+nav {
+    background-color: antiquewhite;
+}
+
+main {
+    background-color: var(--cor01);
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+form {
+    width: 500px;
+}
