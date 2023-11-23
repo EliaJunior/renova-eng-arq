@@ -24,6 +24,11 @@ nav {
     background-color: antiquewhite;
 }
 
+
+form {
+    width: 500px;
+}
+
 main {
     background-color: var(--cor01);
 }
@@ -34,6 +39,45 @@ footer {
     color: white;
 }
 
-form {
-    width: 500px;
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    z-index: 999;
+    border: 2px solid black;
+}
+
+.whatsapp-button img {
+    max-height: 30px;
+    max-width: 30px;
+}
+  
+.whatsapp-button:hover {
+    background-color: #25d366;
+}
+
+.logowpp {
+    height: 30px;
+    width: 30px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
