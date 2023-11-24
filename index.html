@@ -8,56 +8,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/estiloformulario.css">
+    <link rel="stylesheet" href="css/estilo-nossa-gente.css">
+    <link rel="stylesheet" href="css/estilo-contatos.css">
     <title>Renova Engenharia</title>
-    
 </head>
 <body>
     <header>
-        <img src="img/logo_renova_sem_fundo-invertido.png" alt="banner_home">
+        <img src="img/logo_renova_SFIC.png" alt="banner_home">
+        <nav>
+            <a href="#">Serviços</a>
+            <a href="#">Contatos</a>
+            <a href="#">Portfólio</a>
+            <a href="#">Dúvidas frequentes</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#">Serviços</a>
-        <a href="#">Financiamentos</a>
-        <a href="#">Contatos</a>
-        <a href="#">Dúvidas frequentes</a>
-        <a href="#">Portfólio</a>
-        <a href="#">Equipe</a>
-    </nav>
     <main>
-        <section>
-            <h2>Entre em contato com a gente e solicite nossos serviços</h2>
-            <form action="/enviar-formulario" method="post">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
-                    <label for="floatingInput">Endereço de e-mail</label>
+        <section id="secaoformulario">
+            <div class="container">
+                <div class="imagem-lateral">
+                    <img src="img/analise_projeto.jpg" alt="Imagem Lateral" id="imagem-lateral">
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
-                    <label for="floatingInput">Nome</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
-                    <label for="floatingInput">Telefone</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                      <option selected>Selecione um item</option>
-                      <option value="1">Serviço1</option>
-                      <option value="2">Serviço2</option>
-                      <option value="3">Serviço3</option>
-                    </select>
-                    <label for="floatingSelect">Serviço relacionado</label>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Anexar arquivo</label>
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Enviar</button>
-                </div>
-            </form>
+                <form action="/enviar-formulario" method="post" id="form-contato">
+                    <h2>Entre em contato com a gente e solicite nossos serviços</h2>
+                    <div class="form-row">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                    <div class="form-row">
+                        <label for="servico">Serviço:</label>
+                        <select id="servico" name="servico">
+                            <option selected="Selecione um serviço">Selecione um serviço</option>
+                            <option value="1">Serviço 1</option>
+                            <option value="2">Serviço 2</option>
+                            <option value="3">Serviço 3</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="anexo">Anexo de arquivo:</label>
+                        <input type="file" id="anexo" name="anexo">
+                    </div>
+                    <button id="botaoenviar" type="submit">Enviar</button>
+                </form>
+            </div>
         </section>
-        <section>
+        <section class="secaonossagente">
             <h1>Conheça a gente</h1>
             <p>A Renova Arquitetura e Engenharia é uma empresa que se orgulha de sua equipe altamente qualificada e dedicada, comprometida em entregar excelência em projetos de engenharia e arquitetura. Nossos principais profissionais são:</p>
             <div class="apresentacaoequipe">
@@ -80,9 +87,9 @@
                     <li>Sólida experiência em construção civil e consultorias de arquitetura.</li>
                 </ul>
             </div>
-            <p>Nossa equipe é movida pela paixão por design, inovação e excelência técnica. Combinando as habilidades complementares do Eng. Elias Junior e do Arq. Deryck Ferreira, estamos prontos para abraçar desafios complexos e oferecer soluções sob medida para nossos clientes. A Renova Arquitetura e Engenharia se dedica a transformar visões em realidade e a construir espaços funcionais, esteticamente agradáveis e sustentáveis para a satisfação de nossos clientes.</p>
+            <p>Nossa equipe é movida pela paixão por design, inovação e excelência técnica. Estamos prontos para abraçar desafios complexos e oferecer soluções sob medida para nossos clientes.</p>
         </section>
-        <section>
+        <section class="secaonossagente">
             <h1>Nossos Compromissos</h1>
             <h2>Missão</h2>
             <p>Transformar Visões em Realidade: Nossa missão é transformar as visões de nossos clientes em espaços funcionais, esteticamente agradáveis e sustentáveis. Estamos comprometidos em entregar soluções de engenharia e arquitetura de alta qualidade que superem as expectativas e criem ambientes que inspiram.</p>
@@ -96,7 +103,7 @@
             <h2>Propósito</h2>
             <p><strong>Construir um Mundo Melhor Através do Design e Engenharia</strong>: Nosso propósito é contribuir para um mundo melhor, criando espaços que melhoram a qualidade de vida das pessoas e promovem a sustentabilidade. Estamos dedicados a deixar um legado positivo por meio de nossa expertise em engenharia e arquitetura.</p>
         </section>
-        <section>
+        <section class="secaonossagente">
             <h1>Por que contratar a gente ?</h1>
             <p>Contratar a Renova Arquitetura e Engenharia oferece uma série de benefícios significativos. Nossos diferenciais e compromissos incluem:</p>
             <ul>
@@ -108,7 +115,7 @@
             </ul>
             <p>Ao escolher a Renova Arquitetura e Engenharia, você está escolhendo uma equipe comprometida em oferecer resultados excepcionais. Nosso foco está em tornar sua visão realidade e superar desafios com criatividade, inovação e qualidade superior.</p>
         </section>
-        <section>
+        <section class="secaonossagente">
             <h1>Conheça nossos serviços</h1>
             <p>Na Renova Arquitetura e Engenharia, oferecemos uma ampla gama de serviços especializados para atender às diversas necessidades de nossos clientes. Nossos serviços incluem:</p>
             <ul>
@@ -128,12 +135,18 @@
                 <li>Projeto e execução de Sistemas de Aquecimento Solar</li>
             </ul>
         </section>
-        <section>
+        <section class="secaonossagente contatos">
             <h1>Nossos contatos</h1>
-            <span class="material-symbols-outlined">smartphone</span> <p>Eng. Elias Junior - (86) 99993-0217</p>
-            <span class="material-symbols-outlined">smartphone</span> <p>Arq. Deryck Ferreira - (86) 98107-6564</p>
-            <span class="material-symbols-outlined">mail</span> <p>engeliascunha@gmail.com</p>
-            <span class="material-symbols-outlined">mail</span> <p>arqderyck@gmail.com</p>
+            <p>
+                <img src="img/phone-svg.svg" alt="phone-svg">
+                Eng. Elias Junior - (86) 99993-0217</p>
+                <img src="img/phone-svg.svg" alt="phone-svg">
+                Arq. Deryck Ferreira - (86) 98107-6564</p>
+                <img src="img/mail-svg.svg" alt="phone-svg">
+                engeliascunha@gmail.com</p>
+                <img src="img/mail-svg.svg" alt="phone-svg">
+                arqderyck@gmail.com</p>
+            <p>
         </section>
     </main>
     <a href="https://api.whatsapp.com/send?phone=5586999930217&text=Olá Renova, vocês poderiam me tirar uma dúvida ?" class="whatsapp-button" target="_blank">
@@ -145,5 +158,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
