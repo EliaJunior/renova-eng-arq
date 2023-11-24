@@ -17,90 +17,115 @@
     <header>
         <img src="img/logo_renova_SFIC.png" alt="banner_home">
         <nav>
-            <a href="#">Serviços</a>
-            <a href="#">Contatos</a>
+            <a href="#">Home</a>
+            <a href="#">Sobre nós</a>
             <a href="#">Portfólio</a>
-            <a href="#">Dúvidas frequentes</a>
+            <a href="#">Dúvidas</a>
+            <a href="#">Orçamento</a>
+            <a href="#">Contatos</a>
         </nav>
     </header>
     <main>
-        <section id="secaoformulario">
-            <div class="container">
-                <div class="imagem-lateral">
-                    <img src="img/analise_projeto.jpg" alt="Imagem Lateral" id="imagem-lateral">
+        <section id="secaoformulario" class="container-fluid">
+            <h1>Solicite um orçamento, sem compromisso!</h1>
+            <form action="" class="row mb-2 align-items-center">
+                <div class="col">
+                    <picture>
+                        <source media="(max-width: 500px)" srcset="img/projeto_design.jpg">
+                        <img src="img/analise_projeto.jpg" class="rounded mx-auto d-block" alt="imagem-formulario">
+                    </picture>
                 </div>
-                <form action="/enviar-formulario" method="post" id="form-contato">
-                    <h2>Entre em contato com a gente e solicite nossos serviços</h2>
-                    <div class="form-row">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
+                <div id="corpo-formulario" class="col">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="row mb-2">
+                        <div class="col">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="e-mail">
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <input type="tel" class="form-control" id="tel4" placeholder="Telefone">
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="servico">Serviço:</label>
-                        <select id="servico" name="servico">
-                            <option selected="Selecione um serviço">Selecione um serviço</option>
-                            <option value="1">Serviço 1</option>
-                            <option value="2">Serviço 2</option>
-                            <option value="3">Serviço 3</option>
-                        </select>
+                    <div class="row mb-2">
+                        <div class="col">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecione um serviço</option>
+                                <option value="1">Serviço 1</option>
+                                <option value="2">Serviço 2</option>
+                                <option value="3">Serviço 3</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                    <div class="row mb-2">
+                        <div class="col">
+                            <textarea class="form-control" placeholder="Detalhe sua solicitação" style="height: 100px"></textarea>
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="anexo">Anexo de arquivo:</label>
-                        <input type="file" id="anexo" name="anexo">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
                     </div>
-                    <button id="botaoenviar" type="submit">Enviar</button>
-                </form>
-            </div>
+                    <div class="d-grid gap-2"><button type="button" class="btn btn-primary">Enviar</button></div>
+                </div>
+            </form>
         </section>
         <section class="secaonossagente">
             <h1>Conheça a gente</h1>
             <p>A Renova Arquitetura e Engenharia é uma empresa que se orgulha de sua equipe altamente qualificada e dedicada, comprometida em entregar excelência em projetos de engenharia e arquitetura. Nossos principais profissionais são:</p>
-            <div class="apresentacaoequipe">
-                <img class="imgapresentacao" src="img/elias_img.jpg" alt="imagem-equipe">
-                <h2>Eng. Elias Junior</h2>
-                <ul>
-                    <li>Bacharel em Engenharia Civil, formado em 2021.</li>
-                    <li>Possui um MBA em Gestão de Projetos, trazendo experiência em gerenciamento eficaz de empreendimentos.</li>
-                    <li>Especializado em projetos complementares de engenharia, saneamento, construção civil e avaliação de imóveis urbanos.</li>
-                    <li>Oferece consultoria de alta qualidade em sua área de especialização.</li>
-                </ul>
+            <div class="row align-items-center">
+                <div class="col">
+                    <picture>
+                        <source media="(max-width:500px )" srcset="img/img-elias-pequena.jpg">
+                        <img class="rounded mx-auto d-block imgapresentacao" src="img/img-elias-full.jpg" alt="imagem-equipe">
+                    </picture>
+                </div>
+                <div class="col apresentacaoequipe">
+                    <h2>Eng. Elias Junior</h2>
+                    <ul class="lista-curriculo">
+                        <li>Bacharel em Engenharia Civil, formado em 2021.</li>
+                        <li>Possui um MBA em Gestão de Projetos, trazendo experiência em gerenciamento eficaz de empreendimentos.</li>
+                        <li>Especializado em projetos complementares de engenharia, saneamento, construção civil e avaliação de imóveis urbanos.</li>
+                        <li>Oferece consultoria de alta qualidade em sua área de especialização.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="apresentacaoequipe">
-                <img class="imgapresentacao" src="img/derick_img.jpg" alt="imagem-equipe">
-                <h2>Arq. Deryck Ferreira</h2>
-                <ul>
-                    <li>Bacharel em Arquitetura e Urbanismo, graduado em 2020.</li>
-                    <li>Detentor de um MBA em Gestão de Trânsito, traz uma perspectiva única para projetos arquitetônicos.</li>
-                    <li>Especialista em arquitetura comercial, trazendo inovação e criatividade para soluções arquitetônicas comerciais.</li>
-                    <li>Sólida experiência em construção civil e consultorias de arquitetura.</li>
-                </ul>
+            <div class="row align-items-center">
+                <div class="col">
+                    <picture>
+                        <source media="(max-width:500px )" srcset="img/img-derick-pequena.jpg">
+                        <img class="rounded mx-auto d-block imgapresentacao" src="img/img-derick-full.jpg" alt="imagem-equipe">
+                    </picture>
+                </div>
+                <div class="col apresentacaoequipe">
+                    <h2>Arq. Deryck Ferreira</h2>
+                    <ul class="lista-curriculo">
+                        <li>Bacharel em Arquitetura e Urbanismo, graduado em 2020.</li>
+                        <li>Detentor de um MBA em Gestão de Trânsito, traz uma perspectiva única para projetos arquitetônicos.</li>
+                        <li>Especialista em arquitetura comercial, trazendo inovação e criatividade para soluções arquitetônicas comerciais.</li>
+                        <li>Sólida experiência em construção civil e consultorias de arquitetura.</li>
+                    </ul>
+                </div>
             </div>
             <p>Nossa equipe é movida pela paixão por design, inovação e excelência técnica. Estamos prontos para abraçar desafios complexos e oferecer soluções sob medida para nossos clientes.</p>
         </section>
         <section class="secaonossagente">
             <h1>Nossos Compromissos</h1>
-            <h2>Missão</h2>
+            <h2>MISSÃO</h2>
             <p>Transformar Visões em Realidade: Nossa missão é transformar as visões de nossos clientes em espaços funcionais, esteticamente agradáveis e sustentáveis. Estamos comprometidos em entregar soluções de engenharia e arquitetura de alta qualidade que superem as expectativas e criem ambientes que inspiram.</p>
-            <h2>Valores</h2>
+            <h2>VALORES</h2>
             <ul>
-                <li>Excelência: Buscamos a excelência em tudo o que fazemos, desde o atendimento ao cliente até a execução de projetos. Nossos padrões são elevados, e trabalhamos incansavelmente para superá-los.</li>
-                <li>Inovação: Abraçamos a inovação e a criatividade como pilares de nossa prática. Buscamos soluções inovadoras e sustentáveis para desafios complexos.</li>
-                <li>Integridade: A integridade está no centro de nossos relacionamentos com clientes, parceiros e colaboradores. Mantemos a transparência, a ética e a honestidade em todos os aspectos de nosso trabalho.</li>
-                <li>Comprometimento: Somos comprometidos com o sucesso de nossos clientes. Colocamos seus objetivos em primeiro lugar e trabalhamos incansavelmente para alcançá-los.</li>
+                <li><strong>Excelência:</strong> Buscamos a excelência em tudo o que fazemos, desde o atendimento ao cliente até a execução de projetos. Nossos padrões são elevados, e trabalhamos incansavelmente para superá-los.</li>
+                <li><strong>Inovação:</strong> Abraçamos a inovação e a criatividade como pilares de nossa prática. Buscamos soluções inovadoras e sustentáveis para desafios complexos.</li>
+                <li><strong>Integridade:</strong> A integridade está no centro de nossos relacionamentos com clientes, parceiros e colaboradores. Mantemos a transparência, a ética e a honestidade em todos os aspectos de nosso trabalho.</li>
+                <li><strong>Comprometimento:</strong> Somos comprometidos com o sucesso de nossos clientes. Colocamos seus objetivos em primeiro lugar e trabalhamos incansavelmente para alcançá-los.</li>
             </ul>
-            <h2>Propósito</h2>
+            <h2>PROPÓSITO</h2>
             <p><strong>Construir um Mundo Melhor Através do Design e Engenharia</strong>: Nosso propósito é contribuir para um mundo melhor, criando espaços que melhoram a qualidade de vida das pessoas e promovem a sustentabilidade. Estamos dedicados a deixar um legado positivo por meio de nossa expertise em engenharia e arquitetura.</p>
         </section>
         <section class="secaonossagente">
@@ -115,7 +140,7 @@
             </ul>
             <p>Ao escolher a Renova Arquitetura e Engenharia, você está escolhendo uma equipe comprometida em oferecer resultados excepcionais. Nosso foco está em tornar sua visão realidade e superar desafios com criatividade, inovação e qualidade superior.</p>
         </section>
-        <section class="secaonossagente">
+        <section class="secaonossagente secaoservicos">
             <h1>Conheça nossos serviços</h1>
             <p>Na Renova Arquitetura e Engenharia, oferecemos uma ampla gama de serviços especializados para atender às diversas necessidades de nossos clientes. Nossos serviços incluem:</p>
             <ul>
@@ -136,17 +161,15 @@
             </ul>
         </section>
         <section class="secaonossagente contatos">
-            <h1>Nossos contatos</h1>
-            <p>
-                <img src="img/phone-svg.svg" alt="phone-svg">
-                Eng. Elias Junior - (86) 99993-0217</p>
-                <img src="img/phone-svg.svg" alt="phone-svg">
-                Arq. Deryck Ferreira - (86) 98107-6564</p>
-                <img src="img/mail-svg.svg" alt="phone-svg">
-                engeliascunha@gmail.com</p>
-                <img src="img/mail-svg.svg" alt="phone-svg">
-                arqderyck@gmail.com</p>
-            <p>
+                <h1>Nossos contatos</h1>
+                <a href="https://api.whatsapp.com/send?phone=5586999930217&text=Olá Renova, vocês poderiam me tirar uma dúvida ?"> 
+                Eng. Elias Junior - (86) 99993-0217
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5586981076564&text=Olá Renova, vocês poderiam me tirar uma dúvida ?">
+                Arq. Deryck Ferreira - (86) 98107-6564
+                </a>
+                <p>engeliascunha@gmail.com</p>
+                <p>arqderyck@gmail.com</p>
         </section>
     </main>
     <a href="https://api.whatsapp.com/send?phone=5586999930217&text=Olá Renova, vocês poderiam me tirar uma dúvida ?" class="whatsapp-button" target="_blank">

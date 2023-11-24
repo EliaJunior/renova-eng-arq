@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family:'engravers';
+    src: url('../fonts/engravers-gothic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CODE';
+    src: url('../fonts/CODE Light.otf') format('opentype');
+}
 
 :root {
     --cor01:#F2F2F2;
@@ -7,10 +16,18 @@
     --cor03:#737373;
     --cor04:#404040;
     --cor05:#262626;
+    --corWPP:#49C557;
+    --fontepadrao: 'engravers', sans-serif;
 }
 
 body {
     background-color: var(--cor03);
+    width: 100%;
+}
+
+h1 {
+    font-family: var(--fontepadrao);
+    font-weight: bold !important;
 }
 
 header {
@@ -33,59 +50,195 @@ nav a {
     color: white;
     text-align: left;
     text-decoration: none;
-    padding: 5px 15px;
+    padding: 10px 15px;
     font-weight: bold;
-    transition-duration: 0.25s;
+    transition-duration: 0.4s;
 }
 
-#secaoformulario {
-    display: block;
-    padding: 30px;
-    
+nav a:hover {
+    background-color: white;
+    color: var(--cor05);
+    border-radius: 10px;
 }
 
 main {
-    background-color: var(--cor01);
+    padding: 20px;
+    background-color: var(--cor03);
 }
 
-#botaoenviar {
-    align-self: flex-end; /* Alinha o botão à extremidade direita do contêiner */
-    margin-top: 10px; /* Espaçamento superior para separar do último campo */
-    width: 150px;
-    height: 50px;
+/* FORMULÁRIO */
+
+form {
+    margin-left: 20px;
 }
+
+#secaoformulario {
+    max-width: 900px;
+    border: 1px solid var(--cor03);
+    border-radius: 15px;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+#secaoformulario img {
+    min-width: 250px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#secaoformulario h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#secaoformulario textarea {
+    resize: none;
+}
+
+#corpo-formulario {
+}
+
+/* ---------- */
+
+/* NOSSA GENTE */
+
+.secaonossagente {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 20px;
+    text-align: justify;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.secaonossagente h1 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+}
+
+.secaonossagente p {
+    line-height: 1.6;
+}
+
+.secaonossagente .apresentacaoequipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.secaonossagente .imgapresentacao {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.secaonossagente h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: var(--fontepadrao);
+}
+
+.secaonossagente .lista-curriculo {
+    list-style-type: '\1F9BE\00A0\00A0';
+    list-style-position: inside;
+    padding: 0;
+    padding: 0 20px 0 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.secaonossagente ul li {
+    margin-bottom: 5px;
+}
+
+/* ---------------- */
+/* SEÇÃO SERVIÇOS */
+
+.secaoservicos {
+    text-align: justify;
+}
+
+.secaoservicos ul {
+    /* Define uma cor cinza para a lista da seção */
+    color: #666666;
+    /* Define um tamanho de fonte de 18 pixels para a lista da seção */
+    font-size: 18px;
+    /* Define um estilo de lista de círculos para a lista da seção */
+    list-style-type: circle;
+    /* Define um recuo de 40 pixels para a lista da seção */
+    margin-left: 40px;
+}
+
+.secaoservicos ul ul {
+    /* Define um estilo de lista de quadrados para as sublistas da seção */
+    list-style-type: square;
+}
+
+/* ---------------- */
+/* SEÇÃO DE CONTATOS */
+.contatos {
+    font-weight: bold;
+}
+
+.contatos a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    display: block;
+}
+
+.contatos a:hover {
+    background-color: var(--corWPP);
+    border-radius: 15px;
+}
+
+.contatos p {
+    margin: 0;
+}
+
+.contatos img {
+    width: 30px;
+}
+
+/* ------------- */
 
 footer {
     background-color: black;
     color: white;
 }
 
+/* BOTÃO WPP */
+
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: white;
     color: black;
     padding: 12px 20px;
-    border-radius: 15px;
+    border-radius: 20%;
     font-weight: bold;
     z-index: 999;
-    border: 2px solid black;
+    background-color: var(--cor03);
+    transition: 0.4s;
 }
 
 .whatsapp-button img {
-    max-height: 30px;
-    max-width: 30px;
+    max-height: 50px;
+    max-width: 50px;
 }
   
 .whatsapp-button:hover {
-    background-color: #25d366;
+    background-color: white;
 }
 
-.logowpp {
-    height: 30px;
-    width: 30px;
-}
+/* ------------- */
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -102,3 +255,4 @@ footer {
   'GRAD' 0,
   'opsz' 24
 }
+
