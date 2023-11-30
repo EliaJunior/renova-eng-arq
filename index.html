@@ -17,25 +17,19 @@
     <header>
         <img src="img/logo_renova_SFIC.png" alt="banner_home">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Portfólio</a>
-            <a href="#">Dúvidas</a>
-            <a href="#">Orçamento</a>
-            <a href="#">Contatos</a>
+            <a href="#" id="btHome">Home</a>
+            <a href="#" id="btSobrenos">Sobre nós</a>
+            <a href="#" id="btPortfolio">Portfólio</a>
+            <a href="#" id="btDuvidas">Dúvidas</a>
+            <a href="#" id="btSolicitacao">Solicitações</a>
+            <a href="#" id="mostrartudo">All</a>
         </nav>
     </header>
     <main>
-        <section id="secaoformulario" class="container-fluid">
-            <h1>Solicite um orçamento, sem compromisso!</h1>
-            <form action="" class="row mb-2 align-items-center">
-                <div class="col">
-                    <picture>
-                        <source media="(max-width: 500px)" srcset="img/projeto_design.jpg">
-                        <img src="img/analise_projeto.jpg" class="rounded mx-auto d-block" alt="imagem-formulario">
-                    </picture>
-                </div>
-                <div id="corpo-formulario" class="col">
+        <section class="secaoformulario container-fluid align-items-center" id="Formulario">
+            <h1>SOLICITE UM ORÇAMENTO, SEM COMPROMISSO!</h1>
+            <div id="divFormulario">
+                <form action="" method="post">
                     <div class="row mb-2">
                         <div class="col">
                             <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
@@ -54,6 +48,24 @@
                     <div class="row mb-2">
                         <div class="col">
                             <select class="form-select" aria-label="Default select example">
+                                <option selected>Estado</option>
+                                <option value="1">Estado1</option>
+                                <option value="2">Estado2</option>
+                                <option value="3">Estado3</option>
+                            </select>
+                        </div>
+                        <div class="col-8">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Cidade</option>
+                                <option value="1">Cidade1</option>
+                                <option value="2">Cidade2</option>
+                                <option value="3">Cidde3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col">
+                            <select class="form-select" aria-label="Default select example">
                                 <option selected>Selecione um serviço</option>
                                 <option value="1">Serviço 1</option>
                                 <option value="2">Serviço 2</option>
@@ -67,17 +79,17 @@
                         </div>
                     </div>
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col mb-2">
                             <input class="form-control" type="file" id="formFile">
                         </div>
+                        <div class="d-grid gap-2"><button type="submit" class="btn btn-primary">Enviar</button></div>
                     </div>
-                    <div class="d-grid gap-2"><button type="button" class="btn btn-primary">Enviar</button></div>
-                </div>
-            </form>
+                </form>
+            </div>
         </section>
-        <section class="secaonossagente">
-            <h1>Conheça a gente</h1>
-            <p>A Renova Arquitetura e Engenharia é uma empresa que se orgulha de sua equipe altamente qualificada e dedicada, comprometida em entregar excelência em projetos de engenharia e arquitetura. Nossos principais profissionais são:</p>
+        <section class="secaopadrao" id="NosConheca">
+            <h1>NOS CONHEÇA</h1>
+            <p>A Renova Arquitetura e Engenharia é uma empresa que se orgulha de sua equipe altamente qualificada e dedicada, comprometida em entregar excelência em projetos de engenharia e arquitetura.</p>
             <div class="row align-items-center">
                 <div class="col">
                     <picture>
@@ -88,10 +100,9 @@
                 <div class="col apresentacaoequipe">
                     <h2>Eng. Elias Junior</h2>
                     <ul class="lista-curriculo">
-                        <li>Bacharel em Engenharia Civil, formado em 2021.</li>
-                        <li>Possui um MBA em Gestão de Projetos, trazendo experiência em gerenciamento eficaz de empreendimentos.</li>
-                        <li>Especializado em projetos complementares de engenharia, saneamento, construção civil e avaliação de imóveis urbanos.</li>
-                        <li>Oferece consultoria de alta qualidade em sua área de especialização.</li>
+                        <li>Bacharel em Engenharia Civil;</li>
+                        <li>MBA em Gestão de Projetos;</li>
+                        <li>Especializado em instalações prediais;</li>
                     </ul>
                 </div>
             </div>
@@ -105,43 +116,40 @@
                 <div class="col apresentacaoequipe">
                     <h2>Arq. Deryck Ferreira</h2>
                     <ul class="lista-curriculo">
-                        <li>Bacharel em Arquitetura e Urbanismo, graduado em 2020.</li>
-                        <li>Detentor de um MBA em Gestão de Trânsito, traz uma perspectiva única para projetos arquitetônicos.</li>
-                        <li>Especialista em arquitetura comercial, trazendo inovação e criatividade para soluções arquitetônicas comerciais.</li>
-                        <li>Sólida experiência em construção civil e consultorias de arquitetura.</li>
+                        <li>Bacharel em Arquitetura e Urbanismo;</li>
+                        <li>MBA em Gestão de Trânsito Urbano;</li>
+                        <li>Especialista em arquitetura comercial;</li>
+                        <li>Sólida experiência em projetos arquitetônicos;</li>
                     </ul>
                 </div>
             </div>
-            <p>Nossa equipe é movida pela paixão por design, inovação e excelência técnica. Estamos prontos para abraçar desafios complexos e oferecer soluções sob medida para nossos clientes.</p>
         </section>
-        <section class="secaonossagente">
-            <h1>Nossos Compromissos</h1>
+        <section class="secaopadrao" id="Compromissos">
+            <h1>NOSSOS COMPROMISSOS</h1>
             <h2>MISSÃO</h2>
-            <p>Transformar Visões em Realidade: Nossa missão é transformar as visões de nossos clientes em espaços funcionais, esteticamente agradáveis e sustentáveis. Estamos comprometidos em entregar soluções de engenharia e arquitetura de alta qualidade que superem as expectativas e criem ambientes que inspiram.</p>
+            <p>Transformar Visões em Realidade: Nossa missão é transformar as visões de nossos clientes em espaços funcionais, esteticamente agradáveis e sustentáveis.</p>
             <h2>VALORES</h2>
             <ul>
-                <li><strong>Excelência:</strong> Buscamos a excelência em tudo o que fazemos, desde o atendimento ao cliente até a execução de projetos. Nossos padrões são elevados, e trabalhamos incansavelmente para superá-los.</li>
-                <li><strong>Inovação:</strong> Abraçamos a inovação e a criatividade como pilares de nossa prática. Buscamos soluções inovadoras e sustentáveis para desafios complexos.</li>
-                <li><strong>Integridade:</strong> A integridade está no centro de nossos relacionamentos com clientes, parceiros e colaboradores. Mantemos a transparência, a ética e a honestidade em todos os aspectos de nosso trabalho.</li>
-                <li><strong>Comprometimento:</strong> Somos comprometidos com o sucesso de nossos clientes. Colocamos seus objetivos em primeiro lugar e trabalhamos incansavelmente para alcançá-los.</li>
+                <li><strong>Excelência:</strong> Buscamos a excelência em tudo o que fazemos, desde o atendimento ao cliente até a execução de projetos.</li>
+                <li><strong>Inovação:</strong> Abraçamos a inovação e a criatividade como pilares de nossa prática.</li>
+                <li><strong>Integridade:</strong> A integridade está no centro de nossos relacionamentos com clientes, parceiros e colaboradores.</li>
+                <li><strong>Comprometimento:</strong> Somos comprometidos com o sucesso de nossos clientes.</li>
             </ul>
             <h2>PROPÓSITO</h2>
-            <p><strong>Construir um Mundo Melhor Através do Design e Engenharia</strong>: Nosso propósito é contribuir para um mundo melhor, criando espaços que melhoram a qualidade de vida das pessoas e promovem a sustentabilidade. Estamos dedicados a deixar um legado positivo por meio de nossa expertise em engenharia e arquitetura.</p>
-        </section>
-        <section class="secaonossagente">
-            <h1>Por que contratar a gente ?</h1>
+            <p><strong>Construir um Mundo Melhor Através da Arquitetura e Engenharia</strong></p>
+            <h1>POR QUE NOS CONTRATAR ?</h1>
             <p>Contratar a Renova Arquitetura e Engenharia oferece uma série de benefícios significativos. Nossos diferenciais e compromissos incluem:</p>
             <ul>
-                <li><strong>Expertise de Alto Nível:</strong> Com uma equipe composta por profissionais altamente qualificados em engenharia e arquitetura, oferecemos expertise de alto nível em todos os aspectos de nossos projetos. Você pode confiar em nossa capacidade de oferecer soluções técnicas excelentes.</li>
-                <li><strong>Inovação e Criatividade:</strong> Estimulamos a inovação e a criatividade em todos os nossos projetos, trazendo soluções exclusivas e design arrojado que se destacam. Estamos sempre em busca de novas abordagens para superar desafios.</li>
-                <li><strong>Compromisso com a Qualidade:</strong> Nossa cultura é centrada na qualidade. Buscamos a excelência em cada detalhe e nos comprometemos a entregar resultados que superem suas expectativas.</li>
-                <li><strong>Atendimento ao Cliente Personalizado:</strong> Colocamos você, nosso cliente, em primeiro lugar. Nossa equipe oferece atendimento personalizado, entendendo suas necessidades e prioridades para garantir que seu projeto seja um sucesso.</li>
-                <li><strong>Transparência e Integridade:</strong> Mantemos uma relação de confiança e transparência com nossos clientes. Nossos valores éticos incluem a integridade em todas as nossas interações.</li>
+                <li><strong>Expertise de Alto Nível;</strong></li>
+                <li><strong>Inovação e Criatividade;</strong></li>
+                <li><strong>Compromisso com a Qualidade;</strong></li>
+                <li><strong>Atendimento ao Cliente Personalizado;</strong></li>
+                <li><strong>Transparência e Integridade;</strong></li>
             </ul>
-            <p>Ao escolher a Renova Arquitetura e Engenharia, você está escolhendo uma equipe comprometida em oferecer resultados excepcionais. Nosso foco está em tornar sua visão realidade e superar desafios com criatividade, inovação e qualidade superior.</p>
+            <p>Ao escolher a Renova Arquitetura e Engenharia, você está escolhendo uma equipe comprometida em oferecer resultados excepcionais.</p>
         </section>
-        <section class="secaonossagente secaoservicos">
-            <h1>Conheça nossos serviços</h1>
+        <section class="secaopadrao secaoservicos" id="NossosServicos">
+            <h1>NOSSOS SERVIÇOS</h1>
             <p>Na Renova Arquitetura e Engenharia, oferecemos uma ampla gama de serviços especializados para atender às diversas necessidades de nossos clientes. Nossos serviços incluem:</p>
             <ul>
                 <li>Projetos arquitetônicos</li>
@@ -160,27 +168,49 @@
                 <li>Projeto e execução de Sistemas de Aquecimento Solar</li>
             </ul>
         </section>
-        <section class="secaonossagente contatos">
-                <h1>Nossos contatos</h1>
-                <a href="https://api.whatsapp.com/send?phone=5586999930217&text=Olá Renova, vocês poderiam me tirar uma dúvida ?"> 
-                Eng. Elias Junior - (86) 99993-0217
+        <section class="secaopadrao contatos" id="Outros">
+            <div class="logos">
+                <a href="#">
+                    <ion-icon name="logo-facebook" size="large"></ion-icon>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5586981076564&text=Olá Renova, vocês poderiam me tirar uma dúvida ?">
-                Arq. Deryck Ferreira - (86) 98107-6564
+                <a href="#">
+                    <ion-icon name="logo-whatsapp" size="large"></ion-icon>
                 </a>
-                <p>engeliascunha@gmail.com</p>
-                <p>arqderyck@gmail.com</p>
+                <a href="#">
+                    <ion-icon name="logo-instagram" size="large"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-tiktok" size="large"></ion-icon>
+                </a>
+            </div>
+            <div class="outroslinks">
+                <p><a href="#">Fale conosco |</a></p>
+                <p><a href="#">Portfolio |</a></p>
+                <p><a href="#">Sobre nós |</a></p>
+                <p><a href="#">Politica de privacidade</a></p>
+            </div>
         </section>
     </main>
-    <a href="https://api.whatsapp.com/send?phone=5586999930217&text=Olá Renova, vocês poderiam me tirar uma dúvida ?" class="whatsapp-button" target="_blank">
+    <footer>
+        <a href="https://github.com/EliaJunior" target="_blank">
+            <p>&copy; Desenvolvido por ED-42. Todos os direitos reservados.</p>
+        </a>
+    </footer>
+    <!-- BOTÕES -->
+    <a href="https://api.whatsapp.com/send?phone=5586999930217&text=Olá Renova, vocês poderiam me tirar uma dúvida ?" class="whatsapp-button" id="wppBtn" target="_blank">
         <img src="img/wpp_logo.svg" alt="logo_wpp">
     </a>
-    <footer>
-        <p>&copy; Desenvolvido por Elias Junior. Todos os direitos reservados.</p>
-    </footer>
+    <button onclick="to_top()" id="myBtn" class="to-top">
+        <img src="img/to-top.svg" alt="to-top">
+    </button>
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-script.js"></script>
 </body>
 </html>
